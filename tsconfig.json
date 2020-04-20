@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "outDir": "dist",
+        "target": "ES2018"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
