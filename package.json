@@ -28,11 +28,17 @@
     "predev": "yarn build",
     "dev": "nodemon dist/server"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node .scripts/validate-commit-msg.js"
+    }
+  },
   "devDependencies": {
     "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.6",
     "@types/node": "^13.13.0",
     "@types/uuid": "^7.0.2",
+    "husky": "^4.2.5",
     "nodemon": "^2.0.3",
     "typescript": "^3.8.3"
   }
