@@ -31,11 +31,9 @@ class SessionController {
             const passwordsMatch = await bcrypt.compare(req.body.password, user.password)
 
             if (passwordsMatch) {
-                const expirationDate = Math.floor(Date.now() / 1000) + (60 * 60) // Expires in 1 hour
-
                 return res.json({
                     message: 'Successful Login',
-                    token: JWT.sign({ data: { userID: user.id }, exp: expirationDate }, process.env.SECRET)
+                    token: JWT.sign({ data: { userID: user.uuid } }, process.env.SECRET, { expiresIn: '1h' })
                 })
             }
         }
