@@ -6,6 +6,9 @@
         "sourceMap": true,
         "baseUrl": "./",
         "paths": {
+            "@root/*": [
+                "./*"
+            ],
             "@controllers/*": [
                 "controllers/*"
             ],
