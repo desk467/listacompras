@@ -3,7 +3,22 @@
         "module": "commonjs",
         "outDir": "dist",
         "target": "ES2018",
-        "sourceMap": true
+        "sourceMap": true,
+        "baseUrl": "./",
+        "paths": {
+            "@controllers/*": [
+                "controllers/*"
+            ],
+            "@database/*": [
+                "database/*"
+            ],
+            "@models/*": [
+                "database/models/*"
+            ],
+            "@middlewares/*": [
+                "middlewares/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules"

@@ -1,11 +1,7 @@
 import * as Sequelize from 'sequelize'
-import connection from './connection'
+import connection from '@database/connection'
 
-class User extends Sequelize.Model {
-    uuid: string
-    name: string
-    password: string
-}
+class User extends Sequelize.Model { }
 
 User.init({
     uuid: {
@@ -19,6 +15,7 @@ User.init({
     username: {
         type: Sequelize.STRING,
         allowNull: false,
+        unique: true,
     },
     password: {
         type: Sequelize.STRING,
