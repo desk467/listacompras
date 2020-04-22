@@ -5,12 +5,12 @@ import * as Express from 'express'
 import { app } from './app'
 import registerRoutes from './routes'
 
-import errorHandler from "@middlewares/error-handler"
+import errorMiddleware from "@middlewares/error-middleware"
 
 app.use(Express.json())
 registerRoutes(app)
 
-app.use(errorHandler)
+app.use(errorMiddleware)
 
 console.log(`[WEBSERVICE] Webservice ativo na porta ${process.env.PORT}`)
 app.listen(process.env.PORT)
