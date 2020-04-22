@@ -33,6 +33,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "yarn test",
       "commit-msg": "node .scripts/validate-commit-msg.js"
     }
   },
