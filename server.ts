@@ -1,10 +1,8 @@
 require('dotenv').config()
 require('module-alias/register')
 
-import { app } from './app'
-import configureApp from './configure-app'
+import app from './app'
+import logger from './logger'
 
-configureApp(app)
-
-console.log(`[WEBSERVICE] Webservice ativo na porta ${process.env.PORT}`)
+logger.info(`Webservice ativo na porta ${process.env.PORT}`)
 app.listen(process.env.PORT)
