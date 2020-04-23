@@ -6,7 +6,7 @@ import * as bcrypt from 'bcrypt'
 
 import * as request from 'supertest'
 
-describe('POST /login', function () {
+describe('POST /login', () => {
     beforeAll(async () => {
         await sequelize.drop()
         await sequelize.sync({ force: true, })
